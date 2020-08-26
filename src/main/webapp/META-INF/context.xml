@@ -1,0 +1,9 @@
+<Context docBase="adhound" path="/adhound" reloadable="true">
+    <Realm className="org.apache.catalina.realm.JDBCRealm"
+           driverName="com.mysql.cj.jdbc.Driver"
+           connectionURL="jdbc:mysql://localhost:3306/adhound"
+           connectionName="tomcat" connectionPassword="tomcat"
+           userTable="users" userNameCol="username" userCredCol="password"
+           userRoleTable="user_roles" roleNameCol="role_name" >
+    </Realm>
+</Context>

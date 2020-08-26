@@ -1,0 +1,30 @@
+<hibernate-configuration>
+
+    <session-factory>
+        <!--
+        <property name="connection.url">jdbc:mysql://localhost:3306/adhound</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">devfecta</property>
+        <property name="connection.password">m3tallica</property>
+        -->
+        <property name="connection.driver_class">${db.mysqlDriverClass}</property>
+        <property name="connection.url">${db.jdbcUrl}</property>
+        <property name="connection.username">${db.user}</property>
+        <property name="connection.password">${db.password}</property>
+
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <!-- Classes used by Hibernate -->
+        <mapping class="com.adhound.entity.User"/>
+        <mapping class="com.adhound.entity.UserRole"/>
+        <mapping class="com.adhound.entity.Location"/>
+        <mapping class="com.adhound.entity.Region"/>
+        <mapping class="com.adhound.entity.State"/>
+        <mapping class="com.adhound.entity.LocationContact"/>
+
+    </session-factory>
+
+</hibernate-configuration>

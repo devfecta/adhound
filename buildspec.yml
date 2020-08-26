@@ -1,0 +1,30 @@
+version: 0.1
+# More Info: https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+#env: # Optional sequence. Represents information for one or more custom environment variables.
+  #variables:
+phases:
+  install:
+    commands:
+      - echo Entered Install Phase...
+      # - apt update -y # Runs the update command on your build image.
+      # The upgrade command is skipped because that could cause version issues.
+    finally:
+      - echo Running Install Finally...
+  build:
+    commands:
+      - echo Entered Build Phase...
+    finally:
+      - echo Running Build Finally...
+  post_build:
+    commands:
+      - echo Entered Post Build Phase...
+    finally:
+      - echo Running Post Build Finally...
+artifacts:
+  files:
+    - target/adhound.war # Gets all of the files in the base-directory.
+    - appspec.yml
+  base-directory: ./ # Project directory location.
+  discard-paths: no # If yes it will remove the directory structure and place all files in project root directory.
+cache:
+  paths:

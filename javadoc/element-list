@@ -1,0 +1,6 @@
+com.adhound.api
+com.adhound.controller
+com.adhound.entity
+com.adhound.persistence
+com.adhound.service
+com.paypal.subscriptions

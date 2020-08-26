@@ -1,0 +1,103 @@
+/**
+// AdHound Colors //
+Red
+  Hex: #ee2f25
+  RGB: (238,47,37)
+
+Blue
+  Hex: #012d6b
+  RGB: (1,45,107)
+ */
+body {}
+
+body {
+    padding-top: 5rem;
+}
+
+.fa, .fas, .far {
+    color: #012d6b;
+}
+
+main {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+nav {
+    height: 50px;
+    box-shadow: 0 5px 5px #aaa;
+}
+
+nav, footer {
+    background-image: linear-gradient(#eee, #ccc 90%);
+    
+}
+
+footer {
+    box-shadow: 0 -5px 5px #aaa;
+}
+
+.btn-primary {
+    color: #fff;
+    font-weight: bold;
+    background-color: #012d6b;
+}
+
+.btn-secondary {
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-footer {
+    background-image: linear-gradient(#eee, #ccc 90%);
+    box-shadow: 0px 5px 5px #aaa;
+    font-weight: bold;
+    font-size: 2vw;
+}
+.btn-footer > a, #dashboardDiv a, #logoutDiv a {
+    color: #012d6b;
+}
+
+.list-group {
+    font-size: 1em;
+}
+
+@media (min-width: 768px) {
+
+    #dashboardDiv, #logoutDiv {
+        font-size: 2vw;
+        white-space: nowrap;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    #dashboardDiv, #logoutDiv {
+        font-size: 1.5vw;
+    }
+
+    .btn-footer > a::before {
+        font-size: 1.5vw;
+        line-height: .2em;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    #dashboardDiv, #logoutDiv {
+        min-height: 50px;
+        font-size: 4vw;
+        
+    }
+
+    #logoutDiv {
+        justify-content: flex-start !important;
+    }
+
+    #searchDiv {
+        justify-content: flex-end !important;
+    }
+    
+}
